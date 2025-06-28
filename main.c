@@ -29,11 +29,8 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    if (decode) {
-        aria_decode(inpath, outpath);
-    } else {
-        aria_encode(inpath, outpath);
-    }
+    // This does both depending on value of [encode]
+    aria_transcode(inpath, outpath, encode);
 
     return EXIT_SUCCESS;
 }
