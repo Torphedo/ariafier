@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     const char* outpath = argv[3];
 
     if (decode == encode) {
-        LOG_MSG(error, "%s and %s are mutually exclusive and mandatory\n");
+        LOG_MSG(error, "%s and %s are mutually exclusive and mandatory\n", ENCODE_FLAG, DECODE_FLAG);
         print_usage(argv[0]);
         return EXIT_FAILURE;
     }
